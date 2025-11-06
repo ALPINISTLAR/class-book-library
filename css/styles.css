@@ -1,0 +1,74 @@
+/* ** GLOBAL STYLES ** */
+html
+{
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
+}
+/* ----------------- */
+/* ===== body ====== */
+/* ----------------- */
+body
+{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+  background-color: #fff;
+  color: #222;
+}
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+/* * * / AUTOFILL STYLES \ * * */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: transparent;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+/* * * VISUALLY HIDDEN * * */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* *** CONTAINER *** */
+.container
+{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ** MAIN CONTENT ** */
+.main-content
+{
+  flex-grow: 1;
+}
