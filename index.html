@@ -31,5 +31,37 @@
     <!-- Books Grid -->
     <section class="books-container" id="booksContainer"></section>
   </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="bookModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add new book</h2>
+      <form id="bookForm">
+        <input type="hidden" id="bookId" />
+        <input type="text" id="title" placeholder="Book title" required />
+        <input type="text" id="author" placeholder="Author name" required />
+        <select id="genre" required>
+          <option value="">Select genre</option>
+        </select>
+        <div class="rating">
+          <label>Reyting:</label>
+          <div class="stars" id="ratingStars">
+            <i class="far fa-star" data-value="1"></i>
+            <i class="far fa-star" data-value="2"></i>
+            <i class="far fa-star" data-value="3"></i>
+            <i class="far fa-star" data-value="4"></i>
+            <i class="far fa-star" data-value="5"></i>
+          </div>
+        </div>
+        <textarea id="review" placeholder="Short review (required)" required></textarea>
+        <input type="date" id="dateFinished" required/>
+        <input type="url" id="coverUrl" placeholder="Cover Url" required/>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary btn-edit">Save</button>
+          <button type="button" id="cancelBtn" class="btn-primary btn-delete">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
