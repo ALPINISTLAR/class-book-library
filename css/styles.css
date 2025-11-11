@@ -104,6 +104,22 @@ button{
 .btn-delete { background: #d46053; color: white; }
 .btn-delete:hover { background: #cc1c08; }
 
+/* STATS */
+.stats {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+}
+.stat-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
   overflow: hidden;
 }
 
