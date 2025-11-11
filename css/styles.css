@@ -126,6 +126,10 @@ button{
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 0 1.5rem 2rem;
+#spinner{
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 25px);
 }
 /* BOOK CARDS */
 .book-card {
@@ -288,5 +292,17 @@ footer {
 
 .github-link:hover {
   text-decoration: underline;
+}
+.spinner {
+  border: 6px solid #d2d1d1;
+  border-top: 6px solid #2c3e50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 }
