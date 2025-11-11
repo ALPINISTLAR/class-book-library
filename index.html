@@ -31,7 +31,9 @@
       <div class="stat-card">Currently reading: <strong id="currentlyReading">0</strong></div>
     </section>
     <!-- Books Grid -->
-    <section class="books-container" id="booksContainer"></section>
+    <section class="books-container" id="booksContainer">
+      <div id="spinner" class="spinner" style="display: none;"></div>
+    </section>
   </main>
 
   <!-- MODAL -->
@@ -40,12 +42,23 @@
       <h2 id="modalTitle">Add new book</h2>
       <form id="bookForm">
         <input type="hidden" id="bookId" />
-        <input type="text" id="title" placeholder="Book title" required />
-        <input type="text" id="author" placeholder="Author name" required />
-        <select id="genre" required>
+
+        <div class="form-group">
+          <input type="text" id="title" placeholder="Book title" />
+          <div class="error-message" id="titleError"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="author" placeholder="Author name"  />
+          <div class="error-message" id="authorError"></div>
+        </div>
+
+        <div class="form-group"><select id="genre" >
           <option value="">Select genre</option>
         </select>
-        <div class="rating">
+        <div class="error-message" id="genreError"></div></div>
+
+        <div class="form-group">       <div class="rating">
           <label>Reyting:</label>
           <div class="stars" id="ratingStars">
             <i class="far fa-star" data-value="1"></i>
@@ -54,20 +67,31 @@
             <i class="far fa-star" data-value="4"></i>
             <i class="far fa-star" data-value="5"></i>
           </div>
+          <div class="error-message" id="ratingError"></div>
         </div>
-        <textarea id="review" placeholder="Short review (required)" required></textarea>
-        <input type="date" id="dateFinished" required/>
-        <input type="url" id="coverUrl" placeholder="Cover Url" required/>
-        <div class="modal-actions">
-          <button type="submit" class="btn-primary btn-edit">Save</button>
-          <button type="button" id="cancelBtn" class="btn-primary btn-delete">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+      </div>
 
-  <!-- CONFIRM MODAL -->
-   <!-- Delete Confirmation Modal -->
+      <div class="form-group">
+        <textarea id="review" placeholder="Short review"></textarea>
+        <div class="error-message" id="reviewError"></div>
+      </div>
+
+      <div class="form-group">
+              <input type="date" id="dateFinished"/>
+              <div id="dateFinishedError" class="error-message"></div>
+      </div>
+
+      <input type="url" id="coverUrl" placeholder="Cover Url"/>
+      <div class="modal-actions">
+        <button type="submit" class="btn-primary btn-edit">Save</button>
+        <button type="button" id="cancelBtn" class="btn-primary btn-delete">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- CONFIRM MODAL -->
+<!-- Delete Confirmation Modal -->
 <div id="confirmModal" class="modal" style="display: none;">
   <div class="modal-content">
     <p>Do you want to delete this book?</p>
@@ -79,15 +103,15 @@
 </div>
 
 
-  <!-- FOOTER -->
-  <footer>
-    <button id="exportCsv" class="btn-small">CSV eksport</button>
-    <a href="https://github.com/ALPINISTLAR/class-book-library" target="_blank" class="github-link">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <button id="exportCsv" class="btn-small">CSV download</button>
+  <a href="https://github.com/ALPINISTLAR/class-book-library" target="_blank" class="github-link">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+</footer>
 
-  <script type="module" src="./js/main.js"></script>
+<script type="module" src="./js/main.js"></script>
 
 </body>
 </html>
