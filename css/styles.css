@@ -126,6 +126,7 @@ button{
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 0 1.5rem 2rem;
+}
 #spinner{
   position: absolute;
   top: 50%;
@@ -204,6 +205,11 @@ button{
 .actions {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.timestamp{
+  font-size: 12px;
+  color: #555;
 }
 /* MODAL */
 .modal {
@@ -217,7 +223,7 @@ button{
 }
 .modal-content {
   background: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
@@ -225,8 +231,23 @@ button{
   overflow-y: auto;
 }
 .modal-content h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #2c3e50;
+}
+.form-group{
+  padding-top: 0.5rem;
+  position: relative;
+}
+.form-group label {
+  margin-bottom: 5px;
+}
+.error-message{
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  color: red;
+  font-style: italic;
+  font-size: 14px;
 }
 #confirmModal .modal-content{
   display: flex;
@@ -304,5 +325,4 @@ footer {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
 }
