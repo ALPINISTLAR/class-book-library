@@ -201,9 +201,71 @@ button{
   display: flex;
   gap: 0.5rem;
 }
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+#confirmModal .modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.modal-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+#bookForm input,
+#bookForm select,
+#bookForm textarea {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.stars i {
+  font-size: 1.5rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.stars i.active,
+.stars i:hover {
+  color: #f1c40f;
+}
+
+.status {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
 }
 
 /* ** MAIN CONTENT ** */
